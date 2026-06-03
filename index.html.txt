@@ -1,0 +1,589 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavika Wrapped 2026 | Birthday Invitation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            -webkit-tap-highlight-color: transparent;
+            overflow: hidden;
+        }
+        .font-spotify {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Custom slide animation handling */
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        /* Custom text stroke effect for Spotify-aesthetic background titles */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen max-w-md mx-auto relative select-none flex flex-col justify-between bg-[#121212]">
+
+    <div id="progress-container" class="absolute top-4 left-0 right-0 z-50 flex px-4 gap-1.5 hidden">
+        </div>
+
+    <div class="flex-grow flex items-center justify-center relative w-full h-full px-6 py-12">
+        
+        <div id="slide-0" class="slide active flex-col justify-between h-full w-full text-center py-6">
+            <div class="my-auto flex flex-col items-center">
+                <div class="w-16 h-16 bg-[#1DB954] text-black rounded-full flex items-center justify-center text-2xl mb-6 shadow-lg animate-bounce">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <h1 class="font-spotify text-4xl font-extrabold tracking-tighter text-[#1DB954] uppercase mb-2">
+                    Bhavika Wrapped <span class="text-white">2026</span>
+                </h1>
+                <p class="text-gray-400 font-medium tracking-wide text-sm uppercase mb-8">Your Year in Friendship</p>
+                
+                <div class="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl backdrop-blur-sm shadow-xl max-w-xs mx-auto mb-6">
+                    <p class="text-lg font-semibold text-white leading-snug">
+                        "<span class="visitor-name text-[#1DB954]">You</span>'ve officially survived another year in SLS with Bhavika."
+                    </p>
+                </div>
+
+                <div class="space-y-2 text-sm text-gray-400 font-medium max-w-xs">
+                    <p class="animate-pulse">A year of chaos.</p>
+                    <p class="animate-pulse delay-200">A year of laughter.</p>
+                    <p class="animate-pulse delay-500">A year of questionable decisions.</p>
+                    <p class="text-white font-semibold mt-4">And somehow, we made it.</p>
+                </div>
+            </div>
+
+            <button onclick="startWrapped()" class="w-full bg-[#1DB954] hover:bg-[#1ed760] text-black font-spotify font-black py-4 px-8 rounded-full text-md tracking-wider uppercase transition-transform transform active:scale-95 shadow-lg z-20 mt-4">
+                Start Your Wrapped
+            </button>
+        </div>
+
+        <div id="slide-1" class="slide flex-col justify-center h-full w-full bg-gradient-to-b from-indigo-900 via-[#121212] to-black rounded-3xl p-4 overflow-y-auto">
+            <h2 class="font-spotify text-2xl font-black mb-1 text-indigo-400 uppercase tracking-tight">Your Stats</h2>
+            <p class="text-xs text-gray-400 mb-4">How your partnership stacked up this year</p>
+            
+            <div class="grid grid-cols-2 gap-3 w-full text-left">
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-[#1DB954] mb-1"><i class="fa-solid fa-headset"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="847">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">Rants Listened To</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-pink-500 mb-1"><i class="fa-solid fa-share-nodes"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="2431">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">Reels Shared</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-red-500 mb-1"><i class="fa-solid fa-gavel"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="389">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">College Admin Cursed</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-yellow-500 mb-1"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="212">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">"Bro, I Need To Talk" Calls</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-orange-500 mb-1"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="67">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">PROCO Crises Managed</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
+                    <div class="text-2xl text-cyan-400 mb-1"><i class="fa-solid fa-hourglass-end"></i></div>
+                    <div class="text-xl font-bold font-spotify text-white" data-target="54">0</div>
+                    <div class="text-[10px] text-gray-400 font-medium leading-tight uppercase">Deadlines Survived</div>
+                </div>
+                <div class="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800 col-span-2">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <div class="text-xl font-bold font-spotify text-white" data-target="173">0</div>
+                            <div class="text-[10px] text-gray-400 font-medium uppercase">Existential Life Discussions</div>
+                        </div>
+                        <div class="text-2xl text-purple-400"><i class="fa-solid fa-brain"></i></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-[11px] text-center text-zinc-500 mt-4 italic">Stats match calculation standards accurate up to mid-2026.</p>
+        </div>
+
+        <div id="slide-2" class="slide flex-col justify-center h-full w-full bg-gradient-to-b from-fuchsia-950 via-[#121212] to-black rounded-3xl p-4">
+            <h2 class="font-spotify text-2xl font-black mb-1 text-fuchsia-400 uppercase tracking-tight">Top Tracked Memories</h2>
+            <p class="text-xs text-gray-400 mb-6">Your most replayed shared hits with Bhavika</p>
+            
+            <div class="space-y-3.5 w-full">
+                <div class="flex items-center bg-zinc-900/50 p-2.5 rounded-xl border border-zinc-800/80 transform translate-x-0 transition-transform">
+                    <span class="font-spotify font-black text-xl text-fuchsia-500 w-8 text-center">1</span>
+                    <div class="flex-grow pl-2">
+                        <h4 class="font-semibold text-sm text-white">Surviving ProCo</h4>
+                        <p class="text-xs text-gray-400">"Somehow nobody died."</p>
+                    </div>
+                    <div class="text-zinc-600 text-sm"><i class="fa-solid fa-circle-play text-fuchsia-500"></i></div>
+                </div>
+                <div class="flex items-center bg-zinc-900/50 p-2.5 rounded-xl border border-zinc-800/80">
+                    <span class="font-spotify font-black text-xl text-zinc-400 w-8 text-center">2</span>
+                    <div class="flex-grow pl-2">
+                        <h4 class="font-semibold text-sm text-white">Pulling Off Symbhav</h4>
+                        <p class="text-xs text-gray-400">"Powered entirely by panic."</p>
+                    </div>
+                    <div class="text-zinc-600 text-sm"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="flex items-center bg-zinc-900/50 p-2.5 rounded-xl border border-zinc-800/80">
+                    <span class="font-spotify font-black text-xl text-zinc-400 w-8 text-center">3</span>
+                    <div class="flex-grow pl-2">
+                        <h4 class="font-semibold text-sm text-white">Last-Minute Crisis Handling</h4>
+                        <p class="text-xs text-gray-400">"Procrastinate. Panic. Perform."</p>
+                    </div>
+                    <div class="text-zinc-600 text-sm"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="flex items-center bg-zinc-900/50 p-2.5 rounded-xl border border-zinc-800/80">
+                    <span class="font-spotify font-black text-xl text-zinc-400 w-8 text-center">4</span>
+                    <div class="flex-grow pl-2">
+                        <h4 class="font-semibold text-sm text-white">Existential Future Life Talks</h4>
+                        <p class="text-xs text-gray-400">"Where will we be in 5 years?"</p>
+                    </div>
+                    <div class="text-zinc-600 text-sm"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="flex items-center bg-zinc-900/50 p-2.5 rounded-xl border border-zinc-800/80">
+                    <span class="font-spotify font-black text-xl text-zinc-400 w-8 text-center">5</span>
+                    <div class="flex-grow pl-2">
+                        <h4 class="font-semibold text-sm text-white">Last-Minute Beer Plans</h4>
+                        <p class="text-xs text-gray-400">"The best plans are always unplanned."</p>
+                    </div>
+                    <div class="text-zinc-600 text-sm"><i class="fa-solid fa-play"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide-3" class="slide flex-col justify-center items-center h-full w-full bg-gradient-to-br from-cyan-950 via-[#121212] to-emerald-950 rounded-3xl p-6 text-center relative">
+            <p class="text-xs uppercase tracking-widest text-emerald-400 font-bold mb-2">The Diagnostics</p>
+            <h2 class="font-spotify text-2xl font-black mb-6 text-white uppercase leading-tight">Your Friendship Personality</h2>
+            
+            <div class="bg-zinc-900/80 border-2 border-emerald-500/30 rounded-2xl p-6 w-full max-w-xs shadow-2xl relative overflow-hidden backdrop-blur-md">
+                <div class="absolute -right-6 -top-6 text-8xl text-emerald-500/10"><i class="fa-solid fa-compact-disc"></i></div>
+                
+                <div id="personality-icon" class="text-5xl text-emerald-400 mb-4">
+                    </div>
+                <h3 id="personality-title" class="font-spotify text-2xl font-black text-white mb-2 tracking-wide">
+                    </h3>
+                <p id="personality-desc" class="text-sm text-gray-300 leading-relaxed">
+                    </p>
+            </div>
+            
+            <p class="text-xs text-zinc-500 mt-6 italic">Calculated based on chat context matching algorithms.</p>
+        </div>
+
+        <div id="slide-4" class="slide flex-col justify-center items-center h-full w-full bg-gradient-to-b from-amber-950 via-[#121212] to-black rounded-3xl p-6 text-center">
+            <div class="w-20 h-20 bg-gradient-to-tr from-amber-400 to-yellow-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-amber-500/10 mb-6 border border-amber-300 transform rotate-12">
+                <i class="fa-solid fa-trophy text-black"></i>
+            </div>
+            
+            <p class="text-xs uppercase font-bold tracking-widest text-amber-400 mb-2">Status Acquired</p>
+            <h2 class="font-spotify text-3xl font-black mb-4 text-white uppercase">TOP-TIER HUMAN</h2>
+            
+            <p class="text-sm text-gray-400 mb-6 max-w-xs">For successfully navigating the extreme conditions of:</p>
+            
+            <div class="w-full max-w-xs space-y-2 text-left mb-6 font-medium text-xs text-gray-300">
+                <div class="flex items-center gap-2 bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800"><i class="fa-solid fa-check text-amber-400"></i> College life & group projects</div>
+                <div class="flex items-center gap-2 bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800"><i class="fa-solid fa-check text-amber-400"></i> Symbhav event chaos</div>
+                <div class="flex items-center gap-2 bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800"><i class="fa-solid fa-check text-amber-400"></i> Bhavika's unfiltered rants</div>
+                <div class="flex items-center gap-2 bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800"><i class="fa-solid fa-check text-amber-400"></i> Midnight future life panic attacks</div>
+            </div>
+
+            <div class="bg-amber-400 text-black font-spotify font-black py-2 px-6 rounded-full text-xs tracking-wider uppercase">
+                Reward: Lifetime Friendship Status
+            </div>
+        </div>
+
+        <div id="slide-5" class="slide flex-col justify-center h-full w-full bg-gradient-to-b from-purple-950 via-[#121212] to-black rounded-3xl p-6 text-center">
+            <div class="text-4xl text-purple-400 mb-6"><i class="fa-solid fa-hourglass-half"></i></div>
+            <h2 class="font-spotify text-xl font-bold mb-4 text-white">2025 was a spectacular year of memories...</h2>
+            
+            <div class="space-y-1 text-sm text-gray-400 font-medium mb-6">
+                <p>Of high stakes events.</p>
+                <p>Of chaotic mistakes.</p>
+                <p>Of mutual victories.</p>
+                <p>And beautiful people who made every single moment unforgettable.</p>
+            </div>
+            
+            <hr class="border-zinc-800 w-1/3 mx-auto mb-6">
+
+            <p class="text-md font-semibold text-purple-300 leading-snug max-w-xs mx-auto font-spotify">
+                And now... Bhavika is entering a brand-new chapter. She's excited to step forward into the unknown with the crew that made the timeline iconic.
+            </p>
+        </div>
+
+        <div id="slide-6" class="slide flex-col justify-between h-full w-full bg-gradient-to-b from-rose-950 via-[#121212] to-black rounded-3xl p-5 text-center">
+            <div class="my-auto space-y-4">
+                <p class="text-xs uppercase font-bold tracking-widest text-rose-400">Your Next Track is Dropping</p>
+                <h2 class="font-spotify text-xl font-extrabold text-white uppercase tracking-tight">YOUR NEXT EVENT HAS ARRIVED</h2>
+                
+                <div class="bg-zinc-900 border-2 border-rose-500 rounded-2xl p-5 my-4 shadow-2xl relative overflow-hidden">
+                    <div class="text-4xl text-rose-500 mb-2"><i class="fa-solid fa-cake-candles animate-pulse"></i></div>
+                    <h3 class="font-spotify text-2xl font-black text-white tracking-wide uppercase">BHAVIKA'S BIRTHDAY</h3>
+                    
+                    <div class="mt-4 space-y-2 border-t border-zinc-800 pt-3 text-sm">
+                        <div class="flex justify-between"><span class="text-zinc-400 font-medium">DATE</span><span class="text-white font-bold">4th June, 2026</span></div>
+                        <div class="flex justify-between"><span class="text-zinc-400 font-medium">TIME</span><span class="text-white font-bold">11:15 PM</span></div>
+                        <div class="flex justify-between"><span class="text-zinc-400 font-medium">VENUE</span><span class="text-rose-400 font-bold">G-504</span></div>
+                    </div>
+                </div>
+
+                <div class="text-xs text-zinc-400 font-medium space-y-1">
+                    <p>"One more year older."</p>
+                    <p>"Hopefully one more year wiser."</p>
+                    <p class="text-white font-bold">"Definitely one more year chaotic."</p>
+                </div>
+            </div>
+            <p class="text-[11px] text-zinc-500 uppercase tracking-widest animate-pulse font-bold">Tap next to RSVP</p>
+        </div>
+
+        <div id="slide-7" class="slide flex-col justify-center h-full w-full bg-gradient-to-b from-[#121212] to-black rounded-3xl p-5">
+            <h2 class="font-spotify text-2xl font-black mb-1 text-[#1DB954] uppercase tracking-tight text-center">Lock In Your Roster Spot</h2>
+            <p class="text-xs text-gray-400 text-center mb-6">Let us know if you're hitting the stage</p>
+            
+            <form id="rsvp-form" onsubmit="handleFormSubmit(event)" class="space-y-4 w-full text-left">
+                <div>
+                    <label class="block text-xs uppercase font-bold text-gray-400 mb-1.5 tracking-wider">Your Name</label>
+                    <input type="text" id="form-name-input" required class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl py-3 px-4 text-sm focus:outline-none focus:border-[#1DB954] transition-colors" placeholder="Enter your name">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <label class="relative flex items-center justify-center bg-zinc-900 border border-zinc-700 rounded-xl p-3 cursor-pointer select-none has-[:checked]:border-[#1DB954] has-[:checked]:bg-[#1DB954]/10 transition-all">
+                        <input type="radio" name="attendance" value="yes" checked class="sr-only">
+                        <span class="text-sm font-bold text-white">Yes, I'll Be There</span>
+                    </label>
+                    <label class="relative flex items-center justify-center bg-zinc-900 border border-zinc-700 rounded-xl p-3 cursor-pointer select-none has-[:checked]:border-red-500 has-[:checked]:bg-red-500/10 transition-all">
+                        <input type="radio" name="attendance" value="no" class="sr-only">
+                        <span class="text-sm font-bold text-white">Sadly, I'll Miss It</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-[#1DB954] hover:bg-[#1ed760] text-black font-spotify font-black py-3.5 px-4 rounded-full text-sm uppercase tracking-wider transition-all mt-4">
+                    Submit Response
+                </button>
+            </form>
+            
+            <div id="form-success-msg" class="hidden text-center p-4 bg-zinc-900/90 border border-zinc-800 rounded-xl mt-4">
+                <p class="text-sm font-semibold text-[#1DB954] mb-1">Response saved!</p>
+                <p class="text-xs text-gray-400">Thank you for being part of Bhavika Wrapped 2026.</p>
+            </div>
+        </div>
+
+        <div id="slide-8" class="slide flex-col justify-between h-full w-full bg-gradient-to-b from-[#1DB954]/20 via-[#121212] to-black rounded-3xl p-5 text-center">
+            <div class="my-auto space-y-5">
+                <h2 class="font-spotify text-xl font-black text-white uppercase tracking-wider">YOUR YEAR WITH BHAVIKA</h2>
+                
+                <div class="bg-zinc-900/90 border border-zinc-800 p-4 rounded-xl text-left space-y-3 shadow-xl">
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
+                        <span class="text-xs text-gray-400 font-medium uppercase">Memories Created</span>
+                        <span class="text-sm font-bold text-[#1DB954]">Unlimited</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
+                        <span class="text-xs text-gray-400 font-medium uppercase">Laughs Shared</span>
+                        <span class="text-sm font-bold text-[#1DB954]">Countless</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
+                        <span class="text-xs text-gray-400 font-medium uppercase">Crises Managed</span>
+                        <span class="text-sm font-bold text-[#1DB954]">Too Many</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-zinc-800 pb-2">
+                        <span class="text-xs text-gray-400 font-medium uppercase">Friendship Status</span>
+                        <span class="text-sm font-bold text-white">Still Strong ⚡</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-gray-400 font-medium uppercase">Cake Eligibility</span>
+                        <span class="text-xs font-bold bg-[#1DB954]/20 text-[#1DB954] py-0.5 px-2 rounded-full">Approved ✅</span>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-300 font-medium leading-relaxed max-w-xs mx-auto">
+                    "Thank you for being part of Bhavika's story this year. Here's to new adventures, new memories, and another year of figuring life out together."
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-[#1DB954] to-emerald-400 text-black font-spotify font-black py-4 px-6 rounded-full text-md uppercase tracking-widest shadow-lg animate-pulse mt-4">
+                See You At The Party 🎉
+            </div>
+        </div>
+
+    </div>
+
+    <div id="nav-controls" class="absolute bottom-4 left-0 right-0 z-50 flex justify-between px-6 items-center hidden">
+        <button onclick="prevSlide()" class="w-10 h-10 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-white active:scale-90 transition-transform">
+            <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+        <span id="slide-index-indicator" class="text-xs font-mono tracking-widest text-zinc-500 font-bold">1/8</span>
+        <button onclick="nextSlide()" class="w-10 h-10 rounded-full bg-zinc-900/80 border border-zinc-800 flex items-center justify-center text-white active:scale-90 transition-transform">
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+    </div>
+
+    <script>
+        let currentSlideIdx = 0;
+        const totalSlides = 9; // Index 0 to 8
+        let progressBarInterval;
+        const SLIDE_DURATION = 9000; // 9 seconds auto-advance duration per card
+
+        // List of random profile-matching persona templates
+        const personalities = [
+            {
+                title: "The Crisis Manager",
+                desc: "Always fully operational and tactical precisely when structural things collapse or systems implode. Certified fixer.",
+                icon: "<i class='fa-solid fa-shield-halved'></i>"
+            },
+            {
+                title: "The Therapist",
+                desc: "Has evaluated enough emotional rants, debriefs, and crisis phone logs to qualify professionally. Unmatched listening stats.",
+                icon: "<i class='fa-solid fa-couch'></i>"
+            },
+            {
+                title: "The Enabler",
+                desc: "The absolute primary vector for spontaneous plans. Never says no to immediate adventures or emergency coffee runs.",
+                icon: "<i class='fa-solid fa-bolt-lightning'></i>"
+            },
+            {
+                title: "The Realist",
+                desc: "Consistently provides highly logical, flawless, and premium tier life advice that literally absolutely nobody follows.",
+                icon: "<i class='fa-solid fa-compass'></i>"
+            }
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            parseURLPersonalization();
+            assignRandomPersonality();
+            buildProgressBars();
+        });
+
+        // Pull and evaluate name attributes dynamically from the window location parameter strings
+        function parseURLPersonalization() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const rawName = urlParams.get('name');
+            if (rawName) {
+                const sanitizedName = rawName.trim();
+                // Select all dynamic title placeholder classes
+                document.querySelectorAll('.visitor-name').forEach(el => {
+                    el.textContent = sanitizedName;
+                });
+                // Update landing subtitle logic
+                document.title = `${sanitizedName} Wrapped 2026 | Invitation`;
+                // Pre-fill form input automatically
+                document.getElementById('form-name-input').value = sanitizedName;
+            }
+        }
+
+        // Generate a random seed variation index assigned per session visit
+        function assignRandomPersonality() {
+            const chosen = personalities[Math.floor(Math.random() * personalities.length)];
+            document.getElementById('personality-icon').innerHTML = chosen.icon;
+            document.getElementById('personality-title').textContent = chosen.title;
+            document.getElementById('personality-desc').textContent = chosen.desc;
+        }
+
+        // Generate slide tracking top bars architecture mirroring standard Spotify layout 
+        function buildProgressBars() {
+            const container = document.getElementById('progress-container');
+            container.innerHTML = '';
+            // We build indicator bars for slides 1 up to 8 (skipping the splash landing zero page)
+            for (let i = 1; i < totalSlides; i++) {
+                const barBg = document.createElement('div');
+                barBg.className = 'h-1 flex-grow bg-zinc-800 rounded-full overflow-hidden relative';
+                
+                const barFill = document.createElement('div');
+                barFill.id = `bar-fill-${i}`;
+                barFill.className = 'h-full bg-white w-0 transition-all ease-linear';
+                
+                barBg.appendChild(barFill);
+                container.appendChild(barBg);
+            }
+        }
+
+        function startWrapped() {
+            document.getElementById('progress-container').classList.remove('hidden');
+            document.getElementById('nav-controls').classList.remove('hidden');
+            goToSlide(1);
+        }
+
+        function goToSlide(targetIdx) {
+            if (targetIdx < 0 || targetIdx >= totalSlides) return;
+
+            // Remove active tags from existing context slide target
+            document.getElementById(`slide-${currentSlideIdx}`).classList.remove('active');
+            
+            currentSlideIdx = targetIdx;
+            
+            const nextSlideEl = document.getElementById(`slide-${currentSlideIdx}`);
+            nextSlideEl.classList.add('active');
+
+            // Handle bottom menu tracking updates
+            if (currentSlideIdx > 0) {
+                document.getElementById('slide-index-indicator').textContent = `${currentSlideIdx}/${totalSlides - 1}`;
+            }
+
+            // Fire slide specific logic hooks (like counter tickers or celebration systems)
+            handleSlideAnimations(currentSlideIdx);
+            updateProgressBarsUI();
+            startProgressBarTimer();
+        }
+
+        function nextSlide() {
+            if (currentSlideIdx < totalSlides - 1) {
+                goToSlide(currentSlideIdx + 1);
+            } else {
+                // If it reaches the ultimate slide layout frame loop context safely
+                goToSlide(1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlideIdx > 1) {
+                goToSlide(currentSlideIdx - 1);
+            } else if (currentSlideIdx === 1) {
+                // Return to landing context frame completely
+                document.getElementById('progress-container').classList.add('hidden');
+                document.getElementById('nav-controls').classList.add('hidden');
+                document.getElementById(`slide-${currentSlideIdx}`).classList.remove('active');
+                currentSlideIdx = 0;
+                document.getElementById('slide-0').classList.add('active');
+                clearInterval(progressBarInterval);
+            }
+        }
+
+        // Automatic playback state updates handling
+        function startProgressBarTimer() {
+            clearInterval(progressBarInterval);
+            if (currentSlideIdx === 0) return;
+
+            const activeBar = document.getElementById(`bar-fill-${currentSlideIdx}`);
+            if (!activeBar) return;
+
+            let startTime = performance.now();
+            
+            progressBarInterval = setInterval(() => {
+                let elapsed = performance.now() - startTime;
+                let progressPercent = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                
+                activeBar.style.width = `${progressPercent}%`;
+
+                if (elapsed >= SLIDE_DURATION) {
+                    clearInterval(progressBarInterval);
+                    nextSlide();
+                }
+            }, 30);
+        }
+
+        // Align status variables on skipped or backward context bar elements instantly
+        function updateProgressBarsUI() {
+            for (let i = 1; i < totalSlides; i++) {
+                const fill = document.getElementById(`bar-fill-${i}`);
+                if (!fill) continue;
+                
+                // Clear active processing transitions transitions to override instantly
+                fill.style.transition = 'none'; 
+                
+                if (i < currentSlideIdx) {
+                    fill.style.width = '100%';
+                } else if (i === currentSlideIdx) {
+                    fill.style.width = '0%';
+                    // Re-apply matching sleek smooth animation transition rules context
+                    setTimeout(() => { fill.style.transition = 'width 30ms linear'; }, 10);
+                } else {
+                    fill.style.width = '0%';
+                }
+            }
+        }
+
+        function handleSlideAnimations(slideIdx) {
+            // SLIDE 1: Run numeric metrics ticker animations 
+            if (slideIdx === 1) {
+                const targets = document.querySelectorAll('#slide-1 [data-target]');
+                targets.forEach(el => {
+                    const maxVal = parseInt(el.getAttribute('data-target'), 10);
+                    animateNumberValue(el, 0, maxVal, 1500);
+                });
+            }
+            // SLIDE 6: Fire confetti automatically upon reaching the ultimate reveal layout slide
+            if (slideIdx === 6) {
+                triggerCelebrationConfetti();
+            }
+        }
+
+        // Pure standard JS mathematical calculation ticker function
+        function animateNumberValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerText = Math.floor(progress * (end - start) + start).toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function triggerCelebrationConfetti() {
+            const duration = 3 * 1000;
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 4,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#1DB954', '#ffffff', '#ff41b4']
+                });
+                confetti({
+                    particleCount: 4,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#1DB954', '#ffffff', '#ff41b4']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        // Manage user-input processing lifecycle actions
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const nameValue = document.getElementById('form-name-input').value;
+            const attendanceValue = document.querySelector('input[name="attendance"]:checked').value;
+            
+            console.log(`RSVP Logged: Name="${nameValue}", Attending="${attendanceValue}"`);
+            
+            // UI Mutation sequence replacing form elements seamlessly
+            document.getElementById('rsvp-form').classList.add('hidden');
+            document.getElementById('form-success-msg').classList.remove('hidden');
+            
+            // Pop minor successful completion badge splash
+            confetti({
+                particleCount: 60,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
